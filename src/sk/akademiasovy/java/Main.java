@@ -28,8 +28,9 @@ public class Main {
             System.out.println("Idú rovnako rýchlo");
 
 
-        //car2 car3  //premenna car3
-        //car2=car3  //napojíme sa na car2
-        Car car3=new Car("Tesla",6.9f) // nový car3
+        /*car2 car3  premenna car3
+        car2=car3  napojíme sa na car2
+        nový car3*/
+        Car car3=new Car("Tesla",6.9f,"Trencin");
     }
 }

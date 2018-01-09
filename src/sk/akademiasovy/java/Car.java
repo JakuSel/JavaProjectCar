@@ -2,12 +2,15 @@ package sk.akademiasovy.java;
 
 import com.sun.org.apache.xpath.internal.SourceTree;
 
+import java.util.Random;
+
 public class Car {
     private String brand;
     private int speed;
     private boolean engine;
     private float gasConsumption;
     private boolean frontWipper;
+    private String plate;
 
     public Car(){
         speed=0;
@@ -17,12 +20,13 @@ public class Car {
         frontWipper=false;
     }
 
-    public Car(String brand, float gasConsumption){
+    public Car(String brand, float gasConsumption, String city){
         speed=0;
         engine=false;
         this.brand=brand;
         this.gasConsumption=gasConsumption;
         frontWipper=false;
+        generatePlate(city);
     }
 
     public void setBrand(String value){
@@ -84,6 +88,30 @@ public class Car {
             frontWipper=true;
         else
             frontWipper=true;
+    }
+
+    private void generatePlate(String city){
+
+        switch (city.toLowerCase()){
+            case "trencin":plate="TN-"; break;
+            case "presov":plate="PO-"; break;
+            case "bratislava":plate="BL-"; break;
+            case "poprad":plate="PP-"; break;
+            case "senec":plate="SC-"; break;
+            default: plate="KE-";
+        }
+
+        Random random=new Random();
+        int i;
+        for (i=0;i<=3;i++){
+            int randomNumber=random.nextInt();
+                    plate=plate+randomNumber;
+        }
+        for (i=0;i<=2;i++){
+            int randomLetters=random.nextInt(26+'A');
+            plate=plate+randomLetters;
+        }
+
     }
 
 
