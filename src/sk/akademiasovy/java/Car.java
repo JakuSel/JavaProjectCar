@@ -7,12 +7,14 @@ public class Car {
     private int speed;
     private boolean engine;
     private float gasConsumption;
+    private boolean frontWipper;
 
     public Car(){
         speed=0;
         engine=false;
         gasConsumption=7.9f;
         brand=null;
+        frontWipper=false;
     }
 
     public Car(String brand, float gasConsumption){
@@ -20,6 +22,7 @@ public class Car {
         engine=false;
         this.brand=brand;
         this.gasConsumption=gasConsumption;
+        frontWipper=false;
     }
 
     public void setBrand(String value){
@@ -75,4 +78,13 @@ public class Car {
     public String getBrand() {
         return brand;
     }
+
+    public void toggleWipper(){
+        if (frontWipper==false)
+            frontWipper=true;
+        else
+            frontWipper=true;
+    }
+
+
 }
