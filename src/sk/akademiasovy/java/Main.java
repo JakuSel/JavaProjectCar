@@ -3,7 +3,7 @@ package sk.akademiasovy.java;
 public class Main {
     public static void main(String[] args) {
         Car car1=new Car();
-        Car car2=new Car("Skoda 120L",6.5f);
+        Car car2=new Car("Skoda 120L",6.5f,"Kosice");
         car1.setBrand("Audi A8");
         car1.setGasConsumption(9.9f);
         car1.printInfo();
