@@ -63,4 +63,16 @@ public class Car {
         return price;
     }
 
+    public void increaseSpeed(int speed){
+        if(engine==true && speed>0)
+            this.speed=speed;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
 }

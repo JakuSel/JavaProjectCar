@@ -13,5 +13,23 @@ public class Main {
         car2.printInfo();
 
         System.out.println("Naklady na cestu KE->PRG->KE:"+car1.getPrice(1600,1.33f));
+        car1.startEngine();
+        car1.increaseSpeed(50);
+        car2.increaseSpeed(60);
+
+        car1.printInfo();
+        car2.printInfo();
+
+        if (car1.getSpeed()>car2.getSpeed())
+            System.out.println("Rychlejsie je: "+car1.getBrand());
+        else if (car1.getSpeed()<car2.getSpeed())
+            System.out.println("Rychlejšie je :"+car2.getBrand());
+        else
+            System.out.println("Idú rovnako rýchlo");
+
+
+        //car2 car3  //premenna car3
+        //car2=car3  //napojíme sa na car2
+        Car car3=new Car("Tesla",6.9f) // nový car3
     }
 }
